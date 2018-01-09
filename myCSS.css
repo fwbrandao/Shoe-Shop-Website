@@ -1,0 +1,230 @@
+/* -------------------------------------------------------------------------------------------------------------------------
+
+
+LUMIERE FICTION CSS FILE
+
+
+---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------
+
+
+WEBSITE COLOR SCHEME
+
+
+---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* First color: rgba(195, 168, 255, 1); */
+/* Second color: rgba(44, 31, 61, 1); */
+/* Third color: rgba(55, 42, 71, 1); - variation of opacity */
+/* Fourth color: #444; - for main content text and heading */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------
+
+
+MOBILE DEFALTS STYLES - GLOBAL STYLES
+
+
+---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Prevents adjustments of font size after orientation
+change in IE on Windows phone and in IOS */
+
+html {
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+
+
+
+/* Apply a natural box model layout to all elements */
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------
+
+
+HOME STYLES
+
+
+---------------------------------------------------------------------------------------------------------------------------*/
+
+/*bellow - all img and video set to 100% for them to be responsive*/
+
+img, video {
+
+    width: 100%;
+}
+
+body {
+
+    font-family: 'Mukta', sans-serif; /* google fonts*/
+    font-size: 16px;
+    color: #444;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /*hide the scroling on images*/
+
+}
+
+
+.container {
+
+    width: 80%;
+    height: 100%;
+    margin: 100px auto; /* auto set 100px on both 4 sides*/
+
+
+}
+
+
+.homeBgImage {
+
+    position: relative;
+    background-image: url(../images/trainerHomePage.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    border-bottom: 15px solid rgba(53, 38, 80, 0.8);
+    background-attachment: fixed;
+
+}
+
+
+
+.logoC {
+
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    width: 45px;
+    position: fixed;
+    z-index: 110;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------
+
+
+MEDIA QUERIES - MOBILE STYLES - 568px SCREEM RESOLUTUION
+
+
+---------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 568px) {
+
+    h1 {
+        color: green;
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------
+
+
+MEDIA QUERIES - MOBILE STYLES - 768px SCREEM RESOLUTUION
+
+
+---------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+        color: red;
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------
+
+
+MEDIA QUERIES - MOBILE STYLES - 1024px SCREEM RESOLUTUION
+
+
+---------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {
+
+
+    h1 {
+        color: orange;
+    }
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------
+
+
+MEDIA QUERIES - MOBILE STYLES - 1280px SCREEM RESOLUTUION
+
+
+---------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1280px) {
+
+    h1 {
+        color: purple;
+    }
+}
+
+
+
+
+
+
+
+
+
+
