@@ -1,0 +1,987 @@
+/*---------------------------------------------------------------------
+            LUMIERE FICTIONAL WEBSITE CSS STYLE FILE
+---------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------
+                        WEBSITE COLOUR SCHEME
+---------------------------------------------------------------------*/
+
+/*First colour: rgba(195, 168, 255, 1);
+Secondary colour: rgba(44, 31, 61, 1); 
+Third colour: rgba(55, 42, 71, 1); - variations of opacity to the main colour
+Fourth colour: #444; for main content text and headings*/
+
+
+/*---------------------------------------------------------------------
+                        MOBILE DEFAULT STYLES - GLOBAL STYLES
+---------------------------------------------------------------------*/
+
+/* Prevents adjustments of font size after orientation change in IE on Windows phone and in IOS */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Apply a natural box model layout to all elements */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------
+                        THE HOME STYLES
+---------------------------------------------------------------------*/
+
+/* All images and video set to 100% width of their parent container */
+img, video {
+    width: 100%;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
+    color: #444;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*-------------------------------------*/
+
+
+/*Embeded fonts*/
+
+@font-face {
+    font-family: '28_days';
+    src: url(../optimisedFonts/28_days_later-webfont.eot);
+    src: url(../optimisedFonts/28_days_later-webfont.eot?#iefix) format('embedded-opentype'),
+     url(../optimisedFonts/28_days_later-webfont.woff2) format('woff2'),
+     url(../optimisedFonts/28_days_later-webfont.woff) format('woff'),
+     url(../optimisedFonts/28_days_later-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 100px auto;
+}
+
+
+
+/* Global Variables */
+
+a { 
+    text-decoration: none;
+}
+
+
+
+/*---------------------------------------------------------------------
+                        THE HOME STYLES
+---------------------------------------------------------------------*/
+
+.homeBgImage {
+    position: relative;
+    background-image: url(../img/trainerHomePage.jpg); 
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    border-bottom: 15px solid rgba(53, 38, 80, 0.8);
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.logoC {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    width: 45px;
+}
+
+.logoC:hover {
+    animation-name: shake;
+}
+
+.cartIcon {
+    position: absolute;
+    top: 15px;
+    left: 45vw;
+    width: 45px;
+    z-index: 10;
+}
+
+.fa-shopping-basket {
+    font-size: 2em;
+    color: rgba(194, 166, 255, 0.7);
+}
+
+.navC {
+    color: white;
+    height: auto;
+    width: 100%;
+    background-color: rgba(44, 31, 61, 1);
+    border-bottom: 2px solid rgba(194, 166, 255, 0.2);
+}
+
+/*&#9776; this is the code for 3 bar menu*/
+.navBtn  {
+    font-size: 2.5em;
+    display: block;
+    width: 20%;
+    margin: 0 4vw 0 73vw; 
+    padding: 7px 3%;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.headerC {   
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    color: white;    
+    display: block;
+    padding: 15px 5vw 15px 0;
+    text-align: right;
+    border-top: 3px solid rgba(194, 166, 255, 0.2);
+}
+
+.menu-items, .viewCart, .shoppingB, .hand { 
+    display: none; 
+}
+
+.slogan {
+    font-family: '28_days';
+    letter-spacing: 3px;
+    font-size: 2em;
+    font-weight: lighter;
+    text-align: right;
+    padding: 150px 4vw 0 0;
+    color: rgb(205, 205, 205);
+ }
+
+.mainHeading {
+    font-family: 'Lovers Quarrel', cursive, sans-serif;
+    letter-spacing: 3px;
+    font-size: 2em;
+    font-weight: lighter;
+    text-align: center;
+    display: block;
+    margin: 40vh auto 0 auto;
+    color: rgba(255, 255, 255, 1);
+ }
+
+.newCollectionB {  
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    margin: 10px auto 0 auto;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(194, 166, 255, 0.2);
+    cursor: pointer;
+    outline: none;
+    
+    -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon 1.5s ease-in-out infinite alternate;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    
+}
+
+
+/*glow*/
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+}
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+
+
+/*---------------------------------------------------------------------
+            FEATURED PRODUCTS AND SALES STYLES
+---------------------------------------------------------------------*/
+
+h1 {    
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+    font-weight: lighter;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2em;
+    font-family: 'Mukta', sans-serif;
+    font-weight: lighter;
+}
+
+p {
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Here we are demonstrating the flexbox wrap property */
+.allTrainers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+
+.productBox {   
+    margin: 1%;
+    width: 230px;
+    text-align: center;
+}
+
+figure {
+    cursor: pointer;
+    margin: 0;
+}
+
+.pDetail {  
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.price {
+    display: block;
+}
+
+.addToCart {  
+    padding: 15px 20px;
+    display: block;
+    margin: 2vh auto 15vh auto;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgb(44, 31, 61);
+}
+
+.addToCart a {  
+    color: white;
+}
+
+.addToCart a:after {
+    content: " \1F6D2";
+    /*content: " 🛒";*/
+}
+
+
+.holdingC {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    overflow: auto;
+}
+
+.deliveryF {
+    text-align: center;
+    padding: 30px 5%;
+    border: 1px solid #ccc;
+}
+
+.login, .register1 {
+    color: white;
+    font-size: 1em;
+    font-weight: lighter;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 16px;
+    border: none;
+    background-color: rgba(55, 42, 71, 1);
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.userPass {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+
+
+
+/*---------------------------------------------------------------------
+                        THE VIDEO STYLES
+---------------------------------------------------------------------*/
+
+.videoC {
+    border: 6px solid rgba(194, 166, 255, 0.2);
+}
+
+
+/*---------------------------------------------------------------------
+                    ABOUT PAGE STYLES
+---------------------------------------------------------------------*/
+
+aside p {
+    text-align: left;
+}
+
+
+/*---------------------------------------------------------------------
+            CONTACT FORM AND FOOTER STYLES
+---------------------------------------------------------------------*/
+
+.containerFilter {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/trainerContactBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+
+.contactT {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+/* Here is to demonstrate the flexbox order property*/
+.contactD {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.telMob {
+    order: -1;
+}
+
+/*.contactD {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}*/
+
+.ourAddress {  
+    font-size: 1em;
+    line-height: 2em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.smLogo {
+    font-size: 2em;
+    margin: 2% 3% 0 3%;
+    color: rgba(195, 168, 255, 0.8);
+    transition: all 0.5s ease;
+}
+
+.iconsContact {
+    font-size: 1em;
+    margin: 1%;
+    color: rgba(195, 168, 255, 0.8);
+    transition: all 0.5s ease;
+}
+
+.contactD a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(55, 42, 71, 1);
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.formContainer {
+    width: 100%; 
+    height: auto; 
+    margin-top: 25px;
+}
+
+.formC {
+    color: white;
+    width: 100%;
+    margin: 0 auto 100px auto;
+    display: block;
+}
+
+.userPass {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.inputFields {
+    border: none;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: -webkit-linear-gradient(left, rgba(25, 25, 25, 0.9), rgba(25, 25, 25, 0.5));
+    width: 98%;
+    outline: none;
+    margin: 10px 0 20px 0;
+    height: 30px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: lighter;
+    padding: 0 5%;
+}
+
+.inputMessage {
+    border: none;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: -webkit-linear-gradient(left, rgba(25, 25, 25, 0.9), rgba(25, 25, 25, 0.5));
+    width: 98%;
+    outline: none;
+    margin: 10px 0 20px 0;
+    height: auto;
+    color: white;
+    font-size: 1.1em;
+    font-weight: lighter;
+    padding: 20px 5%;
+}
+
+.sendB {
+    font-size: 1em;
+    color: white;
+    line-height: 30px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(55, 42, 71, 1);
+    transition: all 0.5s ease;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.list-unstyled {
+    
+    list-style: none;
+    color: red;
+}
+
+
+  #map {
+    width: 100%;
+    opacity: 0.5;  
+    height: 450px; 
+}
+
+.socialMedia {
+    
+    /* Flexbox code for alignment demonstration*/
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    
+    /*font-size: 1em;
+    height: 30px;
+    text-align: center;
+    color: white;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    width: 90%;*/
+}
+
+.footerD {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-weight: lighter;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    display: block;
+}
+
+footer {  
+    background-color: black;
+    clear: both;
+    margin: 0 auto;
+}
+
+
+
+/*---------------------------------------------------------------------
+                        THE MODAL STYLES
+---------------------------------------------------------------------*/
+
+/* The Modal (background) */
+.modal {
+    color: white;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 65px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: rgba(42, 30, 59, 0.6);
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 0;
+    left: 60vw;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 100;
+    text-shadow: 2px 1px red;  
+}
+
+.close:hover, .close:focus {
+    color: rgba(54, 91, 70, 0.5);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop { 
+    from {
+        top:-300px;
+        opacity:0
+    } 
+    to {
+        top:0;
+        opacity:1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top:-300px;
+        opacity:0
+    }
+    to {
+        top:0;
+        opacity:1
+    }
+}
+
+/*---------------------------------------------------------------------
+                        THE FORM STYLES
+---------------------------------------------------------------------*/
+
+
+.theForm {
+    margin: 30px;
+    padding: 10px 0;
+    height: auto;
+    overflow: hidden;
+}
+
+.theFormL {
+    width: 90%;
+    height: 100%;
+    margin: 0 10% 0 5%;
+    float: left;
+}
+
+.theFormR {
+    width: 90%;
+    height: 100%;
+    margin: 8% 10% 0 5%;
+    float: left;
+}
+
+.theFormR input, .theFormL input {
+    width: 90%;
+    background-color: transparent;
+    border: 1px solid white;
+    height: 30px;
+    color: white;
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+
+
+/*---------------------------------------------------------------------
+                 MOBILE STYLES - 568px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+    
+@media screen and (min-width: 568px) {
+	
+    /*.allTrainers {
+        column-count: 2; 
+    }*/
+        
+    .pDetail {
+        padding: 0;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+        
+    .slogan {
+        padding: 100px 4vw 0 0;
+    }
+        
+    .mainHeading {
+        margin: 0;
+        padding: 30px 4vw 0 0;
+        text-align: right;
+    }
+        
+    .newCollectionB {
+        margin-right: 4vw;
+        margin-bottom: 0vw;
+    }
+        
+    .homeBgImage {
+        height: 100vh;
+    }
+}
+
+
+
+
+/*---------------------------------------------------------------------
+                 TABLET STYLES - 768px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 768px) {
+       
+	/*.allTrainers {
+        column-count: 4; 
+    }*/
+
+    .homeBgImage {
+        height: 80vh;
+    }
+    
+    .container {
+        width: 100%;
+    }
+    
+    .addToCart {
+        margin-bottom: 100px;
+    }
+    
+    .userPass {
+        display: inline;
+    }
+
+}
+
+
+
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 1024px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1024px) {
+    
+   .cartIcon, .navBtn, .hand {
+        display: none;
+    }
+    
+    .menu-items, .viewCart {
+        display: inline;
+    }
+    
+    .container {
+        width: 80%;
+    }
+    
+    .homeBgImage {
+        height: 100vh;  
+    }
+    
+    .logoC {
+        position: absolute;
+        top: 0.8vh;
+        left: 7vw;
+        z-index: 99;
+    }
+    
+    .fa-shopping-basket {
+        font-size: 1.5em;
+    }
+    
+    .navC {
+        background-color: rgba(44, 31, 61, 0.95);
+        border-bottom: none;
+        text-align: right;
+        padding: 10px 0;
+    }
+    
+    nav li a {
+        border-top: none;
+    }
+    
+    nav a {
+        font-size: 0.7em;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 1);
+        text-transform: uppercase;
+        font-weight: lighter;
+        transition: all 0.5s ease;
+    }
+    
+    nav a:hover {
+        color: rgba(194, 166, 255, 1)
+    }
+    
+    .menu-items a {
+        padding: 0 20px;
+        margin: 0 5px;
+        text-align: center;
+        width: 10%;
+        display: inline;
+    }
+    
+    .menu-items li {
+        border-top: none; 
+        display: inline;
+    }
+    
+    .actionB {
+        position: absolute;
+        top: 75vh;
+        left: 3vw; 
+    }
+    
+    .mainHeading {
+        position: absolute;
+        top: 65vh;
+        left: 3vw;
+    }
+    
+    .slogan {
+        font-size: 3em;
+        position: absolute;
+        top: 35vh;
+        right: 8vw;
+     }
+    
+    /*.hand {
+        color: white;
+        font-size: 0.5em;
+        position: absolute;
+        top: 77vh;
+        left: 15vw;
+        margin: 0 0 0 20px;
+    }
+    
+    .actionB:hover + .hand {
+    -webkit-animation: handPointer 2s ease 0s;
+    -webkit-animation-iteration-count:infinite;  
+    animation: handPointer 2s ease 0s; 
+    animation-iteration-count:infinite;
+}
+
+    @-webkit-keyframes handPointer {
+                                    0%{left:15%;} 
+                                    50%{left:22%;}     
+                                    100%{left:15%;}
+                                    }
+
+    @keyframes handPointer {
+                            0%{left:15%;} 
+                            50%{left:22%;}     
+                            100%{left:15%;}
+                            }
+    */
+    .holdingC {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 20px 30px;
+        overflow: auto;
+    }
+    .shoppingB {
+        width: 100%;
+        margin: 20px 0 30px 0;
+        border: 1px solid #ccc;
+        height: auto;
+        padding: 20px 0 50px 0;
+        display: block;
+    }
+
+    .shoppingText {
+        font-weight: bold;
+        margin-left: 20px;
+    }
+    
+    .videoC {
+        margin: 20px 20px 0 0;
+        width: 60%;
+        float: left;
+        height: auto;
+    }
+    
+    .aboutText p {
+        font-size: 0.9em;
+        text-align: justify;
+        line-height: normal;
+        padding-top: 20px;
+    }
+    
+    .contactD {
+        text-align: left;
+        width: 36.3%;
+        float: left;
+        height: 288px;
+        margin-top: 8px;
+    }
+    .formContainer {
+        width: 60%;
+        float: left;
+        height: auto;
+        margin-top: 25px;
+    }
+    
+    .theFormL {
+        width: 40%;
+        margin: 0 5% 0 5%;
+    }
+
+    .theFormR {
+        width: 40%;
+        margin: 0 0 0 5%;
+    }
+    
+    
+    .sendB:hover {
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(55, 42, 71, 0.5);
+    }
+    .inputFields:focus, .inputMessage:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgb(43, 30, 59), 0 0 8px rgb(212, 210, 208);
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+        background-color: red;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Here is to demonstrate the flexbox order property*/
+    .telMob {
+        order: 0;
+    }
+
+}
+
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 1280px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1280px) {
+    
+    .hand {
+        display: inline;
+    }
+    
+    .hand {
+        color: white;
+        font-size: 0.5em;
+        position: absolute;
+        top: 77vh;
+        left: 15vw;
+        margin: 0 0 0 20px;
+    }
+    
+    .actionB:hover + .hand {
+    -webkit-animation: handPointer 2s ease 0s;
+    -webkit-animation-iteration-count:infinite;  
+    animation: handPointer 2s ease 0s; 
+    animation-iteration-count:infinite;
+}
+
+    @-webkit-keyframes handPointer {
+                                    0%{left:15%;} 
+                                    50%{left:22%;}     
+                                    100%{left:15%;}
+                                    }
+
+    @keyframes handPointer {
+                            0%{left:15%;} 
+                            50%{left:22%;}     
+                            100%{left:15%;}
+                            }
+    
+    
+	
+}
+
+
+
