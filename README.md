@@ -1,6 +1,6 @@
 #PHPMailer Extras
 
-These classes provide optional additional functions to PHPMailer.
+These classes provide optional additional functions to PHPMailer..
 
 These are not loaded by the PHPMailer autoloader, so in some cases you may need to `require` them yourself before using them.
 
